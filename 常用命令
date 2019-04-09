@@ -21,3 +21,5 @@ systemctl stop firewalld.service
 关闭开机自启
 systemctl disable firewalld.service
 
+awk -F ',' '{print$1}' stj.csv|awk '!x[$0]++'|wc -l
+sed -i '/23:5[5-9]/d' stj.csv
