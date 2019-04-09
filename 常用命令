@@ -1,0 +1,8 @@
+cd
+cp 
+scp /stj926/stj root@192.xxx.xxx.xxx /stj926/
+mv
+rm -rf
+ls -lh
+chown stj926:stj926 
+ssh 192.xxx.xxx.xxx
