@@ -2,7 +2,22 @@ cd
 cp 
 scp /stj926/stj root@192.xxx.xxx.xxx /stj926/
 mv
+mkdir -p
+
 rm -rf
 ls -lh
-chown stj926:stj926 
+ln -s
+vim
+gedit
+chown stj926:stj926
+chmod 775
+
 ssh 192.xxx.xxx.xxx
+ssh ssh-keygen -t rsa -P ''
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+
+关闭防火墙
+systemctl stop firewalld.service
+关闭开机自启
+systemctl disable firewalld.service
+
