@@ -32,3 +32,4 @@ wget http://repo.mysql.com/mysql80-community-release-el7-2.noarch.rpm
 rpm -ivh mysql-community-release-el7-5.noarch.rpm
 yum update
 yum install mysql-server
+yum remove mysql
