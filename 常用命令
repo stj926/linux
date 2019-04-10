@@ -22,7 +22,8 @@ systemctl stop firewalld.service
 systemctl disable firewalld.service
 
 awk -F ',' '{print$1}' stj.csv|awk '!x[$0]++'|wc -l
-sed -i '/23:5[5-9]/d' stj.csv
+sed -i '/23:5[5-9]/d' stj.csv #删除
+sed -i"s/anonymous_enable=YES/anonymous_enable=NO/g" '/etc/vsftpd/vsftpd.conf'#替换
 
 #centos:
 rpm -qa | grep mysql　　// 检测系统是否自带安装 MySQL
