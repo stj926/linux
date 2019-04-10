@@ -1,0 +1,42 @@
+#检查是否按照ftp
+rpm -q vsftpd
+
+#安装
+yum  install -y  vsftpd
+
+#查看状态
+systemctl status vsftpd.service
+#启动
+systemctl start vsftpd.service
+#设置开机自启
+systemctl enable vsftpd.service
+
+#vim /etc/vsftpd/vsftpd.conf
+修改：
+anonymous_enable=NO  # 禁用匿名登录
+ascii_upload_enable=YES
+ascii_download_enable=YES
+chroot_local_user=YES  # 启用限定用户在其主目录下
+添加：
+use_localtime=YES
+listen_port=21
+chroot_local_user=YES
+idle_session_timeout=300
+guest_enable=YES
+guest_username=vsftpd
+user_config_dir=/etc/vsftpd/vconf
+data_connection_timeout=1
+virtual_use_local_privs=YES
+pasv_min_port=10060
+pasv_max_port=10090
+accept_timeout=5
+connect_timeout=1
+allow_writeable_chroot=YES #使用户的主目录不具有写权限
+
+建立用户文件：第一行用户名，第二行密码，不能使用root为用户名
+#vim /etc/vsftpd/virtusers
+test
+liu
+
+。。。
+。。。
