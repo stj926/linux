@@ -58,6 +58,10 @@ fi
 
 https://blog.csdn.net/u010670689/article/details/45077005
 
+tdate="20190909"
+date -d "`echo $tdate` +1days" "+%Y%m%d"
+
+
 
 减去一天
 
