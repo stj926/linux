@@ -52,3 +52,28 @@ else
 echo "$yyyy$mm$dd"
 DoAll
 fi
+
+
+
+
+https://blog.csdn.net/u010670689/article/details/45077005
+
+
+减去一天
+
+[dc@dc010.tj.momo.com init_env]$ date -d "20150416 -1 days" "+%Y%m%d"
+
+20150415
+
+减去三天
+
+
+[dc@dc010.tj.momo.com init_env]$ date -d "20150416 -3 days" "+%Y%m%d"
+
+20150413
+
+加上三天
+
+[dc@dc010.tj.momo.com init_env]$ date -d "20150416 3 days" "+%Y%m%d"
+
+20150419
