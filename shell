@@ -1,0 +1,54 @@
+DoAll()
+{
+...
+}
+
+tdate=$1
+echo $tdate
+fdate=$2
+echo $fdate
+if [ "0$tdate" == "0" ]
+then
+tdate=`date -d "1 days ago" +"%Y%m%d"`
+fi
+if [ "0$fdate" == "0" ]
+then
+fdate=0
+fyyyy=0
+else
+fyyyy=`echo $fdate | cut -c1-4`
+fi
+
+yyyy=`echo $tdate | cut -c1-4`
+mm=`echo $tdate | cut -c5-6`
+dd=`echo $tdate | cut -c7-8`
+
+if [ "$fyyyy" -ge "$yyyy" ]
+then
+        for((i=0;i<20000;i++))
+        do
+                tdate1=`date -d "$i days ago" +"%Y%m%d"`
+                fdate1=`date -d "$i days ago" +"%Y%m%d"`
+                if [ "$tdate1" == "$tdate" ];then
+                        tdays=$i
+                        break
+                fi
+                if [ "$fdate1" == "$fdate" ];then
+                        fdays=$i
+                fi
+        done
+
+        for((i=$fdays;i<=$tdays;i++))
+        do
+                tdate=`date -d "$i days ago" +"%Y%m%d"`
+                yyyy=`echo $tdate | cut -c1-4`
+                mm=`echo $tdate | cut -c5-6`
+                dd=`echo $tdate | cut -c7-8`
+
+echo "$yyyy$mm$dd"
+DoAll
+        done
+else
+echo "$yyyy$mm$dd"
+DoAll
+fi
