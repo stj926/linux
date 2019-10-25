@@ -82,3 +82,8 @@ tdateadd1=`date -d "$(echo $tdate) +1days" "+%Y%m%d"`
 [dc@dc010.tj.momo.com init_env]$ date -d "20150416 3 days" "+%Y%m%d"
 
 20150419
+
+
+
+#用f2过滤f1
+awk -F, 'NR==FNR {a[$1]=1; } NR>FNR&&a[$1] {print $0}' ~/f2 ~/f1
