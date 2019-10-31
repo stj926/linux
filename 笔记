@@ -1,0 +1,6 @@
+bios/urfi
+mbr/gpt
+boot loader
+boot
+
+mbr/gpt -> 分区 -> 文件系统(ext4(inode/block/superblock,目录树))
