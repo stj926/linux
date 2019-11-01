@@ -20,4 +20,4 @@ suid sgid sbit
 ACL:getfacl setfacl
 visudo修改指令权限
 PAM(设置验证哪些服务可以通过)
-uid gid pid
+uid gid pid ppid
