@@ -1,4 +1,4 @@
-bios/urfi
+bios/uefi
 mbr/gpt （mbr最多4个分区）
 boot loader
 boot
