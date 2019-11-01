@@ -19,4 +19,4 @@ chattr/lsattr
 suid sgid sbit
 ACL:getfacl setfacl
 visudo修改指令权限
-PAM(设置无法登陆shell)
+PAM(设置验证哪些服务可以通过)
