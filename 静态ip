@@ -1,0 +1,11 @@
+静态ip设置（all）
+# /etc/sysconfig/network-scripts/ifcfg-ens33
+BOOTPROTO=static
+ONBOOT=yes
+IPADDR=192.168.79.128
+NETMASK=255.255.255.0
+GATEWAY=192.168.79.2
+DNS1=192.168.79.2
+
+service network restart 重启网络生效
+yum install -y net-tools ifconfig查看设置
