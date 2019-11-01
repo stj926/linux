@@ -1,5 +1,5 @@
 bios/urfi
-mbr/gpt
+mbr/gpt （mbr最多4个分区）
 boot loader
 boot
 
