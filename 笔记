@@ -17,3 +17,4 @@ chattr/lsattr
   chattr设置的文件隐藏属性
   lsattr命令是显示chattr命令设置的文件属性
 suid sgid sbit
+ACL:getfacl setfacl
