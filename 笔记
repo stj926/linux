@@ -12,3 +12,6 @@ dump cpio tar dd
 
 权限管理：
 umask 修改默认权限
+chattr/lsattr
+  chattr设置的文件属性
+  lsattr命令是显示chattr命令设置的文件属性
