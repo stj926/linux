@@ -1,10 +1,12 @@
 https://www.cnblogs.com/sparkdev/p/9015312.html
 
 
-挂在文件
+挂在文件https://www.cnblogs.com/yyxx8888/p/10521196.html
+安装nfs
 vim /etc/exports
-加入/root/pyfile 172.16.22.48/24(ro,sync,no_root_squash)
-systemctl restart nfs-server.service
+加入/root/pyfile *(ro,sync,no_root_squash)
+#systemctl restart nfs-server.service
 sudo mount -t nfs 172.16.22.125:/root/pyfile /mnt/stj
+umount /mnt/stj
 
 https://www.jb51.net/article/108374.htm
